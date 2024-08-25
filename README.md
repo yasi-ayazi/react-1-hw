@@ -1,25 +1,41 @@
-# Homework
+# Galactica Space Travel App
 
-## Get git ready to work on homework
+## Introduction
+Galactica is a space travel application built with Next.js and React. This project aims to teach students the fundamentals of React and Next.js by creating a dynamic and interactive space exploration app.
 
-Using the `hyf-homework` repo. In the terminal run `git status`
+## Prerequisites
+- Node.js (version 18 or higher)
+- npm or yarn
 
-If there are changes that have not been committed, figure out what to do with those changes
+## Getting Started
 
-- Should they be committed to another branch?
-- Should they be committed to `main`?
-- Should they be discarded?
+### Installation
+1. Fork the repository (Recommended)
+2. Clone the repository using Code > Clone
 
-When you have figured out what to do with the changes and fixed those. Write `git status` again. If it says `nothing to commit, working tree clean`. Then you are ready to create the branch for this weeks homework.
+Now you should have to project on your computer.
 
-### Creating the branch
+3. cd into the homework folder
+4. run `npm install`
 
-Using the `hyf-homework` repo write this command
 
-`git checkout main` - You are now on the `main` branch
+### Running the Development Server
 
-`git checkout -b nodejs-week1`
+`npm run dev`
 
-This will create and checkout the branch so you are ready make commits to it
+Open your browser and navigate to http://localhost:3000 to see the app in action.
 
-[This video](https://www.youtube.com/watch?v=XYlgh9hSWtw) can help. On slack use the #git-support channel to ask questions about git
+## HOMEWORKS:
+
+Throughout the weeks you will be adding new features to this existing application.
+For your tasks you should be searching for the following:
+
+- Tasks for week1: `TASK - React 1 week 1`
+- Tasks for week2: `TASK - React 1 week 2`
+- Tasks for week3: `TASK - React 1 week 3`
+
+You should be fixing ALL THE INSTANSCES of the current week.
+
+### How to find the tags?
+
+Use the global search function in your IDE. (`cmnd + shift + F` OR `Control + shift + F`)
