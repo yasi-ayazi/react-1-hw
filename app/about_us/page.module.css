@@ -3,3 +3,62 @@
   width: 100vw;
   height: 100vh;
 }
+
+.valueItem {
+  margin-bottom: 1.5rem;
+}
+
+.valueTitle {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  color: #ffffff;
+}
+
+.valueText {
+  font-size: 1rem;
+  color: #dddddd;
+  line-height: 1.6;
+}
+
+.crewList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.crewList button {
+  background-color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.partnerGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.partnerCard {
+  text-align: center;
+  max-width: 150px;
+}
+
+.partnerCard img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.partnerCard p {
+  margin-top: 0.5rem;
+  color: #ccc;
+}
+
+
