@@ -57,21 +57,20 @@ const OurCrew = () => {
 
       <div className={styles.crewList}>
         {crewMembers.map((member, index) => (
-          <button key={index} onClick={() => handleClick(index)}>
+          <button key={member.Name} onClick={() => handleClick(index)}>
             {member.Name}
           </button>
         ))}
       </div>
 
       {selectedIndex !== null && (
-        <div style={{ marginTop: "2rem" }}>
+        <div className={styles.crewDetail}>
           <h3>
             {crewMembers[selectedIndex].Title} – {crewMembers[selectedIndex].Name}
           </h3>
-          <img
+          <img className={styles.crewImage}
             src={crewMembers[selectedIndex].image}
             alt={crewMembers[selectedIndex].Name}
-            style={{ width: "200px", borderRadius: "10px" }}
           />
           <p>{crewMembers[selectedIndex].Description}</p>
         </div>
