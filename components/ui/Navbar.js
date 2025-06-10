@@ -2,6 +2,7 @@
 import classNames from "classnames";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { NavItem } from "./NavItem";
 
 import styles from "./Navbar.module.css";
 
@@ -55,8 +56,8 @@ export const Navbar = () => {
             isActive={navbarItems[2].link === currentPath}
             index={3}
           />
-          // This part is not needed anymore, as we are using the NavItem
-          component
+          {/* This part is not needed anymore, as we are using the NavItem
+          component */}
           {/*
           <li
             className={classNames(styles.navbarLinks, {
