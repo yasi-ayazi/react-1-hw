@@ -3,6 +3,7 @@ import "./globals.css";
 
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
+import "@/font/fontAwesome"; // Import FontAwesome icons for use in footer (social media links).
 
 const inter = Inter({ subsets: ["latin"] });
 
