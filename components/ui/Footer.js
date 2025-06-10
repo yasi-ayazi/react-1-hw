@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import styles from "./Footer.module.css";
 import Link from "next/link";
 import { SocialMediaItem } from "./SocialMediaItem";
-import "/font/fontAwesome.js"; 
+import "/font/fontAwesome.js";
 
 export const Footer = () => {
   const path = usePathname().split("?")[0];

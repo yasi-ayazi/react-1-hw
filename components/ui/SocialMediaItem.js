@@ -1,6 +1,6 @@
-'use client';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styles from './Footer.module.css';
+"use client";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styles from "./Footer.module.css";
 
 export const SocialMediaItem = ({ url, title, icon }) => {
   return (

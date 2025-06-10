@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import styles from "./Navbar.module.css";
 
@@ -7,7 +7,7 @@ const NavItem = ({ title, link, isActive, index }) => {
     <li key={index}>
       <a
         href={link}
-            className={isActive ? styles.navItemActive : styles.navItem}
+        className={isActive ? styles.navItemActive : styles.navItem}
       >
         {title}
       </a>
