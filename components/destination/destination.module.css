@@ -19,7 +19,7 @@
   margin-inline-start: auto;
 }
 
-.planetCard > *:last-child {
+.planetCard>*:last-child {
   margin-inline-start: auto;
 }
 
@@ -52,6 +52,7 @@
   border-radius: 50%;
   margin: 0 var(--spacing-16);
 }
+
 .wishlistList {
   display: flex;
   margin: var(--spacing-16) 0;
@@ -77,8 +78,27 @@
   font-size: small;
 }
 
-.addWishlistItem input, 
+.addWishlistItem input,
 .addWishlistItem select {
+  padding-left: 0.5rem;
+
   height: 30px;
   margin-block-end: var(--spacing-20);
+}
+
+.addWishlistItem input,
+.addWishlistItem select,
+.addWishlistItem button {
+  color: black;
+  background-color: white;
+}
+
+.addWishlistItem button:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.addWishlistItem button {
+  font-weight: bold;
+  border: 1px solid #ccc;
 }

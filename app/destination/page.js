@@ -92,6 +92,9 @@ export const Destinations = () => {
           {/* TASK - React 1 week 3 */}
           {/* Import the AddWishlistItem react component */}
           {/* <AddWishlistItem /> */}
+          <AddWishlistItem />
+
+
           {/* TASK - React 1 week 3 */}
           {/* Convert the list, so it is using selectedPlanets.map() to display the items  */}
           {/* Implement the "REMOVE" function */}
@@ -110,7 +113,22 @@ export const Destinations = () => {
               thumbnail="/destination/image-europa.png"
             />
           </div> */}
+          <h3>Your current wishlist</h3>
+          <div className={styles.wishlistList}>
+            {selectedPlanets.map((planetName) => {
+              const planetInfo = planetData.find((p) => p.name === planetName);
+              return (
+                <PlanetWishlistItem
+                  key={planetName}
+                  name={planetName}
+                  onRemove={() => removeFromWishlist(planetName)}
+                  thumbnail={planetInfo?.thumbnail || ""}
+                />
+              );
+            })}
+          </div>
         </section>
+
         <section className="card">
           <h2>Possible destinations</h2>
           {/* TASK - React 1 week 2 */}

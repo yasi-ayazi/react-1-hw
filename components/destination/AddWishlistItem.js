@@ -19,7 +19,6 @@ export const AddWishlistItem = ({
     // call the onAddWishlistItem here
   }
 
-
   return (
     <div className={styles.addWishlistItem}>
       <p>Add custom planet to wishlist</p>
