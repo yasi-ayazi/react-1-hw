@@ -45,7 +45,6 @@
   padding: 0 var(--spacing-8);
   margin: var(--spacing-20);
   background-color: transparent;
-
 }
 
 .navbarBG {
@@ -71,7 +70,20 @@
   letter-spacing: 1px;
 }
 
-.navbarLinks:hover, .isLinkActive {
+.navbarLinks:hover,
+.isLinkActive {
   border-block-end: var(--spacing-04) solid var(--border-color);
   margin-block-end: -4px;
+}
+
+.navItem {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  font-weight: normal;
+}
+
+.navItemActive {
+  font-weight: bold;
+  color: #00ccff;
 }
