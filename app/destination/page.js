@@ -28,8 +28,7 @@ export const Destinations = () => {
   const [selectedPlanets, onAddPlanet] = useState([]);
   // We don't need this line anymore. (let isPlanetSelected = false;)
   // We don't need this line anymore. (let numberOfPlanets = 0;)
-  const numberOfPlanets = selectedPlanets.length;
-  const planetData = [
+  const [planetData, setPlanetData] = useState([
     {
       name: "Europa",
       description:
@@ -54,7 +53,7 @@ export const Destinations = () => {
         "Titan, Saturn's largest moon, is a world of dense atmosphere and liquid methane lakes. This enigmatic moon is shrouded in a thick orange haze, concealing a landscape that is both alien and strangely familiar, beckoning explorers to uncover its secrets.",
       thumbnail: "/destination/image-titan.png",
     },
-  ];
+  ]);
 
   const onAddOrRemovePlanet = (name) => {
     //I deleted Index
@@ -86,7 +85,7 @@ export const Destinations = () => {
           {/* Display the number Of selected planets */}
           {/* Display the "no planets" message if it is empty! */}
           {selectedPlanets.length === 0 ? (
-            <p> "No planets in wishlist :(" </p>
+            <p>No planets in wishlist :(</p>
           ) : (
             <p>You have {selectedPlanets.length} in your wishlist</p>
 
@@ -97,7 +96,24 @@ export const Destinations = () => {
           {/* TASK - React 1 week 3 */}
           {/* Import the AddWishlistItem react component */}
           {/* <AddWishlistItem /> */}
-          <AddWishlistItem />
+          <AddWishlistItem
+            onAddWishlistItem={({ name, thumbnail }) => {
+              if (!selectedPlanets.includes(name)) {
+                onAddPlanet([...selectedPlanets, name]);
+              }
+
+              if (!planetData.find((p) => p.name === name)) {
+                setPlanetData((prev) => [
+                  ...prev,
+                  {
+                    name,
+                    thumbnail,
+                    description: "No description provided for custom planet.",
+                  },
+                ]);
+              }
+            }}
+          />
 
 
           {/* TASK - React 1 week 3 */}
@@ -153,7 +169,8 @@ export const Destinations = () => {
                 />
                 <div className={styles.planetDescription}>
                   <h2>
-                    {planet.name.toUpperCase()} {isSelected ? "- SELECTED" : ""}
+                    {planet.name.toUpperCase()}{" "}
+                    {isSelected ? "- SELECTED" : ""}
                   </h2>
                   <p>{planet.description}</p>
                 </div>
