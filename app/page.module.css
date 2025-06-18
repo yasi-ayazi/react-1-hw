@@ -65,3 +65,10 @@ p.heroJumbo {
   margin-bottom: 1rem;
   max-width: 1000px;
 }
+
+.wishlistItemThumbnail {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
