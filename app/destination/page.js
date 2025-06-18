@@ -70,6 +70,10 @@ export const Destinations = () => {
       onAddPlanet([...selectedPlanets, name]);
     }
   };
+  const removeFromWishlist = (planetName) => {
+    onAddPlanet(selectedPlanets.filter((p) => p !== planetName));
+  };
+
 
   return (
     <div className="fullBGpicture">
@@ -84,7 +88,8 @@ export const Destinations = () => {
           {selectedPlanets.length === 0 ? (
             <p> "No planets in wishlist :(" </p>
           ) : (
-            <p>`You have {selectedPlanets.length} in your wishlist`</p>
+            <p>You have {selectedPlanets.length} in your wishlist</p>
+
           )}
           <b>List coming soon after lesson 3!</b>
 
